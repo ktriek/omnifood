@@ -1,0 +1,14 @@
+
+$primary: orange;
+
+$theme-colors: (
+  "primary": $primary 
+);
+
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+
+
+.logo {
+  height: 2.2rem;
+}
