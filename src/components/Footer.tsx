@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { LogoFacebook, LogoInstagram, LogoTwitter } from "react-ionicons";
 
 export default function App() {
+    const [year] = useState<number>(new Date().getFullYear());
     return (
         <footer className="footer">
             <div className="container grid grid--footer">
@@ -9,7 +11,7 @@ export default function App() {
                         <img className="logo" alt="Omnifood logo" src="img/omnifood-logo.png" />
                     </a>
 
-                    <ul className="footer-nav">
+                    <ul className="social-links">
                         <li>
                             <a className="footer-link" href="#"><LogoInstagram /></a>
                         </li>
@@ -22,8 +24,7 @@ export default function App() {
                     </ul>
 
                     <p className="copyright">
-                        Copyright &copy; <span className="year">2027</span> by Omnifood, Inc.
-                        All rights reserved.
+                        Copyright &copy; <span className="year">{year}</span> by Omnifood, Inc. All rights reserved.
                     </p>
                 </div>
 

@@ -7,16 +7,18 @@
   justify-content: space-between;
   align-items: center;
   background-color: #fdf2e9;
+  width: 100%;
 
-  /* Because we want header to be sticky later */
   height: 9.6rem;
-  padding: 0 4.8rem;
-  position: relative;
+  padding: 0 4.8rem; 
+  position: fixed;
+  z-index: 99999;
+
+  .logo {
+    height: 2.2rem;
+  }  
 }
 
-.logo {
-  height: 2.2rem;
-}
 
 /**************************/
 /* NAVIGATION */
@@ -70,10 +72,6 @@
   height: 4.8rem;
   width: 4.8rem;
   color: #333;
-}
-
-.icon-mobile-nav[name="close-outline"] {
-  display: none;
 }
 
 /* STICKY NAVIGATION */
@@ -290,9 +288,11 @@
 .tag--vegetarian {
   background-color: #51cf66;
 }
+
 .tag--vegan {
   background-color: #94d82d;
 }
+
 .tag--paleo {
   background-color: #ffd43b;
 }
@@ -543,12 +543,10 @@
 }
 
 .cta-img-box {
-  background-image: linear-gradient(
-      to right bottom,
+  background-image: linear-gradient(to right bottom,
       rgba(235, 151, 78, 0.35),
-      rgba(230, 125, 34, 0.35)
-    ),
-    url("../img/eating.jpg");
+      rgba(230, 125, 34, 0.35)),
+    url("/img/eating.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -616,11 +614,6 @@
   list-style: none;
   display: flex;
   gap: 2.4rem;
-}
-
-.social-icon {
-  height: 2.4rem;
-  width: 2.4rem;
 }
 
 .copyright {

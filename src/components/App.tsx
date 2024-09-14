@@ -1,9 +1,8 @@
 import { CheckmarkOutline, CloseOutline, FlameOutline, RestaurantOutline, StarOutline, InfiniteOutline, LeafOutline, NutritionOutline, PauseOutline, LogoFacebook, LogoInstagram, LogoTwitter } from 'react-ionicons';
 import Header from './Header';
-import Footer from './Footer'; 
+import Footer from './Footer';
 
-function App() {
-  // const [count, setCount] = useState(0)
+function App() { 
 
   return (
     <>
@@ -72,16 +71,16 @@ function App() {
         </section>
 
         <section className="section-how" id="how">
-          <div className="container ">
+          <div className="container">
             <span className="subheading">How it works</span>
             <h2 className="heading-secondary">
               Your daily dose of health in 3 simple steps
             </h2>
           </div>
 
-          <div className="container d-flex">
+          <div className="container grid grid--2-cols grid--center-v">
             {/* <!-- STEP 01 --> */}
-            <div className="step-text-box ">
+            <div className="step-text-box">
               <p className="step-number">01</p>
               <h3 className="heading-tertiary">
                 Tell us what you like (and what not)
