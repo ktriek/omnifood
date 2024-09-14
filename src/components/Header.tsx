@@ -1,27 +1,9 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import './header.scss';
+import { CloseOutline, MenuOutline } from 'react-ionicons';
 
 function Header() {
     return (
         <header className="header">
-            <Navbar expand="lg" className="bg-body">
-                <Container fluid>
-                    <Navbar.Brand href="#home"><img className="logo" alt="Omnifood logo" src='/img/omnifood-logo.png' /></Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="ms-auto">
-                            <Nav.Link href="#how">How it works</Nav.Link>
-                            <Nav.Link href="#meals">Meals</Nav.Link>
-                            <Nav.Link href="#testimonials">Testimonials</Nav.Link>
-                            <Nav.Link href="#pricing">Pricing</Nav.Link>
-                            <a className="btn btn-primary" href="#cta">Try for free</a>
-                        </Nav>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar>
-            {/* <a href="#">
+            <a href="#">
                 <img className="logo" alt="Omnifood logo" src="img/omnifood-logo.png" />
             </a>
 
@@ -38,9 +20,9 @@ function Header() {
             </nav>
 
             <button className="btn-mobile-nav">
-                <MenuOutline />
-                <CloseOutline />
-            </button> */}
+                <MenuOutline cssClasses="icon-mobile-nav" />
+                <CloseOutline cssClasses="icon-mobile-nav" />
+            </button>
         </header>
 
     )
