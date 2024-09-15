@@ -2,7 +2,7 @@ import { CheckmarkOutline, CloseOutline, FlameOutline, RestaurantOutline, StarOu
 import Header from './Header';
 import Footer from './Footer';
 
-function App() { 
+function App() {
 
   return (
     <>
@@ -168,7 +168,7 @@ function App() {
                     <span><strong>650</strong> calories</span>
                   </li>
                   <li className="meal-attribute">
-                    <StarOutline />
+                    <RestaurantOutline />
                     <span>NutriScore &reg; <strong>74</strong></span>
                   </li>
                   <li className="meal-attribute">
@@ -481,7 +481,7 @@ function App() {
 
           <div className="container grid grid--4-cols">
             <div className="feature">
-              <InfiniteOutline />
+              <div className="feature-icon"><InfiniteOutline /></div>
               <p className="feature-title">Never cook again!</p>
               <p className="feature-text">
                 Our subscriptions cover 365 days per year, even including major
@@ -489,7 +489,7 @@ function App() {
               </p>
             </div>
             <div className="feature">
-              <NutritionOutline />
+              <div className="feature-icon"><NutritionOutline /></div>
               <p className="feature-title">Local and organic</p>
               <p className="feature-text">
                 Our cooks only use local, fresh, and organic products to prepare
@@ -497,7 +497,7 @@ function App() {
               </p>
             </div>
             <div className="feature">
-              <LeafOutline />
+              <div className="feature-icon"><LeafOutline /></div>
               <p className="feature-title">No waste</p>
               <p className="feature-text">
                 All our partners only use reusable containers to package all your
@@ -505,7 +505,7 @@ function App() {
               </p>
             </div>
             <div className="feature">
-              <PauseOutline />
+              <div className="feature-icon"> <PauseOutline /></div>
               <p className="feature-title">Pause anytime</p>
               <p className="feature-text">
                 Going on vacation? Just pause your subscription, and we refund
