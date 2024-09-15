@@ -1,7 +1,17 @@
 import { CheckmarkOutline, CloseOutline, FlameOutline, RestaurantOutline, StarOutline, InfiniteOutline, LeafOutline, NutritionOutline, PauseOutline, LogoFacebook, LogoInstagram, LogoTwitter } from 'react-ionicons';
 import Header from './Header';
 import Footer from './Footer';
-
+const diets = [
+  'Vegetarian',
+  'Vegan',
+  'Pescatarian',
+  'Gluten-free',
+  'Lactose-free',
+  'Keto',
+  'Paleo',
+  'Low FODMAP',
+  'Kid-friendly',
+]
 function App() {
 
   return (
@@ -211,42 +221,10 @@ function App() {
             <div className="diets">
               <h3 className="heading-tertiary">Works with any diet:</h3>
               <ul className="list">
-                <li className="list-item">
+                {diets.map(diet => <li className="list-item">
                   <CheckmarkOutline />
-                  <span>Vegetarian</span>
-                </li>
-                <li className="list-item">
-                  <CheckmarkOutline />
-                  <span>Vegan</span>
-                </li>
-                <li className="list-item">
-                  <CheckmarkOutline />
-                  <span>Pescatarian</span>
-                </li>
-                <li className="list-item">
-                  <CheckmarkOutline />
-                  <span>Gluten-free</span>
-                </li>
-                <li className="list-item">
-                  <CheckmarkOutline />
-                  <span>Lactose-free</span>
-                </li>
-                <li className="list-item">
-                  <CheckmarkOutline />
-                  <span>Keto</span>
-                </li>
-                <li className="list-item">
-                  <CheckmarkOutline />
-                  <span>Paleo</span>
-                </li>
-                <li className="list-item">
-                  <CheckmarkOutline />
-                  <span>Low FODMAP</span>
-                </li>
-                <li className="list-item">
-                  <CheckmarkOutline />
-                  <span>Kid-friendly</span>
-                </li>
+                  <span>{diet}</span>
+                </li>)}
               </ul>
             </div>
           </div>
@@ -317,91 +295,9 @@ function App() {
           </div>
 
           <div className="gallery">
-            <figure className="gallery-item">
-              <img
-                src="img/gallery/gallery-1.jpg"
-                alt="Photo of beautifully
-            arranged food"
-              />
-              {/* <!-- <figcaption>Caption</figcaption> --> */}
-            </figure>
-            <figure className="gallery-item">
-              <img
-                src="img/gallery/gallery-2.jpg"
-                alt="Photo of beautifully
-            arranged food"
-              />
-            </figure>
-            <figure className="gallery-item">
-              <img
-                src="img/gallery/gallery-3.jpg"
-                alt="Photo of beautifully
-            arranged food"
-              />
-            </figure>
-            <figure className="gallery-item">
-              <img
-                src="img/gallery/gallery-4.jpg"
-                alt="Photo of beautifully
-            arranged food"
-              />
-            </figure>
-            <figure className="gallery-item">
-              <img
-                src="img/gallery/gallery-5.jpg"
-                alt="Photo of beautifully
-            arranged food"
-              />
-            </figure>
-            <figure className="gallery-item">
-              <img
-                src="img/gallery/gallery-6.jpg"
-                alt="Photo of beautifully
-            arranged food"
-              />
-            </figure>
-            <figure className="gallery-item">
-              <img
-                src="img/gallery/gallery-7.jpg"
-                alt="Photo of beautifully
-            arranged food"
-              />
-            </figure>
-            <figure className="gallery-item">
-              <img
-                src="img/gallery/gallery-8.jpg"
-                alt="Photo of beautifully
-            arranged food"
-              />
-            </figure>
-            <figure className="gallery-item">
-              <img
-                src="img/gallery/gallery-9.jpg"
-                alt="Photo of beautifully
-            arranged food"
-              />
-            </figure>
-            <figure className="gallery-item">
-              <img
-                src="img/gallery/gallery-10.jpg"
-                alt="Photo of beautifully
-            arranged food"
-              />
-            </figure>
-            <figure className="gallery-item">
-              <img
-                src="img/gallery/gallery-11.jpg"
-                alt="Photo of beautifully
-            arranged food"
-              />
-            </figure>
-            <figure className="gallery-item">
-              <img
-                src="img/gallery/gallery-12.jpg"
-                alt="Photo of beautifully
-            arranged food"
-              />
-            </figure>
+            {[...Array(12).keys()].map(num => (<figure className="gallery-item">
+              <img src={`img/gallery/gallery-${num + 1}.jpg`} alt="Photo of beautifully arranged food" />
+            </figure>))}
           </div>
         </section>
 
