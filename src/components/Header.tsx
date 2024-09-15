@@ -1,8 +1,19 @@
 import { useState } from 'react';
 import { CloseOutline, MenuOutline } from 'react-ionicons';
+import { scroller } from 'react-scroll';
 
 function Header() {
     const [navOpen, setNavOpen] = useState<boolean>(false);
+
+    const scrollTo = (target: string) => {
+        event?.preventDefault();
+        scroller.scrollTo(target, {
+            duration: 800,
+            delay: 0,
+            smooth: 'easeInOutQuart'
+          })
+        setNavOpen(false);
+    }
     return (
         <header className={`header ${navOpen ? 'nav-open' : ''}`}>
             <a href="#">
@@ -11,13 +22,13 @@ function Header() {
 
             <nav className="main-nav">
                 <ul className="main-nav-list">
-                    <li><a className="main-nav-link" href="#how">How it works</a></li>
-                    <li><a className="main-nav-link" href="#meals">Meals</a></li>
+                    <li><a className="main-nav-link" href="#how" onClick={() => scrollTo('how')}>How it works</a></li>
+                    <li><a className="main-nav-link" href="#meals" onClick={() => scrollTo('meals')}>Meals</a></li>
                     <li>
-                        <a className="main-nav-link" href="#testimonials">Testimonials</a>
+                        <a className="main-nav-link" href="#testimonials" onClick={() => scrollTo('testimonials')}>Testimonials</a>
                     </li>
-                    <li><a className="main-nav-link" href="#pricing">Pricing</a></li>
-                    <li><a className="main-nav-link nav-cta" href="#cta">Try for free</a></li>
+                    <li><a className="main-nav-link" href="#pricing" onClick={() => scrollTo('pricing')}>Pricing</a></li>
+                    <li><a className="main-nav-link nav-cta" href="#cta" onClick={() => scrollTo('cta')}>Try for free</a></li>
                 </ul>
             </nav>
 
